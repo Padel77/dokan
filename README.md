@@ -1,2 +1,7 @@
-# dokan
- dokan app 
+# Dokan App
+ NextJs App ecommerce 
+with technology 
+Nextjs
+Tailwind
+Axios
+
