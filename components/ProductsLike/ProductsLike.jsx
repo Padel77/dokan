@@ -5,7 +5,7 @@ import {AiFillAlert, AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/
 import {PlusCircleIcon} from "@heroicons/react/24/outline";
 // import api from '../../utils/api';
 
-const TopDeals = () => {
+const ProductsLike = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -94,10 +94,10 @@ const TopDeals = () => {
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-        <div className="trending">
-            <div className="container">
+        <div className="my-10">
+            <div className="">
                 <div className="title-btns">
-                    <p className='text-lg font-bold'>Top Deals</p>
+                    <p className='text-lg font-bold'>Products You May Like</p>
                     <div className="flex gap-2">
                         <button className='h-8 border p-1' title="scroll left" onClick={slideLeft}>
                             <AiOutlineArrowLeft/>
@@ -304,4 +304,4 @@ const TopDeals = () => {
         </div>
     </>);
 };
-export default TopDeals;
+export default ProductsLike;

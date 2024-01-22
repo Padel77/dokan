@@ -18,10 +18,10 @@ function MainHeader(props) {
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
-    return (<div className="">
-        <Disclosure as="nav" className="lg:block hidden mb-2">
+    return (<>
+        <Disclosure as="nav" className="lg:block  hidden mb-2">
             {({open}) => (<>
-                <div className="mx-auto max-w-7xl ">
+                <div className="">
                     <div className="relative flex h-16 items-center justify-between">
                         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                             {/* Mobile menu button*/}
@@ -34,7 +34,7 @@ function MainHeader(props) {
                             </Disclosure.Button>
                         </div>
                         <div
-                            className="flex flex-1 gap-3 items-center justify-center sm:items-stretch sm:justify-start">
+                            className="flex flex-1 md:gap-5 gap-3 items-center justify-center sm:items-stretch sm:justify-start">
                             <div className="flex gap-2 flex-shrink-0 items-center">
                                 <img
                                     className="h-8 w-auto"
@@ -114,21 +114,20 @@ function MainHeader(props) {
         </Disclosure>
         <Disclosure as="nav" className='md:bg-white md:text-black HeadSec mb-2 lg:py-0 py-3  '>
             {({open}) => (<>
-                <div className="mx-auto max-w-7xl ">
+                <div >
                     <div className="relative flex  items-center justify-between">
-
                         <div
-                            className="lg:flex block gap-8  flex-1  lg:mx-2 mx-8  items-center justify-center sm:items-stretch sm:justify-start">
+                            className="lg:flex block md:gap-8 gap-5  flex-1  lg:mx-2 mx-8  items-center justify-center sm:items-stretch sm:justify-start">
                             <div className="  flex-shrink-0 items-center mb-3">
-                                <div className=" inset-y-0 justify-between  left-0 flex  items-center lg:hidden">
+                                <div className="lg:hidden flex inset-y-0 justify-between     items-center ">
                                     <div className='flex '>
                                     {/* Mobile menu button*/}
                                     <Disclosure.Button
                                         className="relative inline-flex items-center justify-center rounded-md p-2 text-white    focus:outline-none  focus:ring-inset focus:ring-white">
                                         <span className="absolute -inset-0.5"/>
                                         <span className="sr-only">Open main menu</span>
-                                        {open ? (<XMarkIcon className="block h-8 w-8" aria-hidden="true"/>) : (
-                                            <Bars3Icon className="block h-8 w-8" aria-hidden="true"/>)}
+                                        {open ? (<XMarkIcon className="block h-8 w-10" aria-hidden="true"/>) : (
+                                            <Bars3Icon className="block h-8 w-10" aria-hidden="true"/>)}
                                     </Disclosure.Button>
                                     <img
                                         className="h-10 w-auto block md:hidden"
@@ -136,8 +135,8 @@ function MainHeader(props) {
                                         alt="Your Company"
                                     />
                                     </div>
-                                    <div className='flex flex-shrink'>
-                                        <div className=" text-sm Bright-Orange   ">
+                                    <div className='flex '>
+                                        <div className=" text-sm Bright-Orange block sm:hidden   ">
                                             SAR 124,00
                                         </div>
 
@@ -172,7 +171,7 @@ function MainHeader(props) {
                                         </svg>
                                     </div>
                                     <input type="search" id="default-search"
-                                           className="block w-full p-3 rounded-e-3xl  ps-12 lg:pe-24 text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                           className="block w-full p-3 rounded-e-3xl  ps-12 lg:pe-32 text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                            placeholder="Search Product..." required/>
                                     <button type="submit"
                                             className=" text-xl absolute end-1 bottom-1  focus:ring-4 focus:outline-none focus:ring-light-300  rounded-lg px-4 py-2 dark:bg-light-600 dark:hover:bg-light-700 dark:focus:ring-light-800">
@@ -180,6 +179,7 @@ function MainHeader(props) {
                                     </button>
                                 </div>
                             </form>
+
                             <div className=" hidden  md:flex gap-1 flex-shrink-0 items-center">
                                 <img
                                     className="h-8 w-auto"
@@ -188,14 +188,14 @@ function MainHeader(props) {
                                 />
                                 <div>
                                     <div className='text-sm leading-3'>
-                                        <span className=" text-gray-400">Delivery to:</span>
-                                        <div className='font-bold leading-3'>
-                                            <p className=""> Sulaimaniyah Dist, 455 Riyad Saud... (30-45 mins)</p>
-                                            <p className="">sds</p>
+                                        <span className=" text-gray-800">Delivery to:</span>
+                                        <div className='font-bold leading-5'>
+                                            <p className=""> Sulaimaniyah Dist, 455 Riyad Saud... </p>
+                                            <p className="">(30-45 mins)</p>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" className='text-red-600 text-sm underline'>
+                                <button type="submit" className='text-red-600 text-sm underline font-bold'>
                                     Change
                                 </button>
                             </div>
@@ -205,11 +205,11 @@ function MainHeader(props) {
                                     <span className="text-sm  text-gray-600">Your Cashback</span>
                                 </div>
                                 <span
-                                    className="text-sm flex font-bold justify-center align-middle text-center">SAR 124,00</span>
+                                    className="text-sm flex font-bold justify-center align-middle text-center"><img src='/img/HeadIcon.svg'/>SAR 124,00</span>
                             </div>
                         </div>
                         <div
-                            className="absolute inset-y-0 right-0 flex gap-3 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                            className="lg:flex hidden absolute inset-y-0  top-0 right-0  gap-3 items-center pr-2 sm:static sm:inset-auto ">
                             <button
                                 type="button"
                                 className="sm:block hidden  relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -260,22 +260,21 @@ function MainHeader(props) {
                 </Disclosure.Panel>
             </>)}
         </Disclosure>
-        <Disclosure as="nav" className="">
-            <Disclosure.Panel className="lg:hidden">
+        <Disclosure as="nav">
+            <Disclosure.Panel className="lg:hidden block">
                 <div className="space-y-1 px-2 pb-3 pt-2">
                     {navigation.map((item) => (<Disclosure.Button
                         key={item.name}
                         as="a"
                         href={item.href}
                         className={classNames(item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium')}
-                        aria-current={item.current ? 'page' : undefined}
-                    >
+                        aria-current={item.current ? 'page' : undefined}>
                         {item.name}
                     </Disclosure.Button>))}
                 </div>
             </Disclosure.Panel>
             <div className="lg:block hidden sm:ml-6  border-b-2">
-                <div className="flex space-x-4">
+                <div className="flex sm:space-x-10 space-x-6">
                     {navigation.map((item) => (<a
                         key={item.name}
                         href={item.href}
@@ -304,7 +303,7 @@ function MainHeader(props) {
                 Change
             </button>
         </div>
-    </div>);
+    </>);
 }
 
 export default MainHeader

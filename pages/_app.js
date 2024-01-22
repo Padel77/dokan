@@ -1,10 +1,19 @@
-import '../styles/globals.css'
-import { Quicksand } from 'next/font/google'
-const quicksand = Quicksand({ subsets: ['latin'] })
-export default function MyApp({ Component, pageProps }) {
-    return(
-        <main className={quicksand.className}>
-    <Component {...pageProps} />
-    </main>
-        )
+import '../styles/globals.css';
+import { Metadata } from 'next';
+import Layout from "/layout";
+import {Quicksand} from 'next/font/google'
+import {Suspense} from "react";
+import Loading from "@/layout/loading";
+
+const quicksand = Quicksand({subsets: ['latin']})
+
+function MyApp({ Component, pageProps }) {
+    return (
+        <Layout className={quicksand.className}>
+
+                <Component {...pageProps} />
+        </Layout>
+    );
 }
+
+export default MyApp;

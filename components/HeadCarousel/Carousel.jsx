@@ -12,7 +12,7 @@ const Carousel = ({ images }) => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 100,
         slidesToShow: 1,
         slidesToScroll: 1,
         beforeChange: (current, next) => setActiveIndex(next),

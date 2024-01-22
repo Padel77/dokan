@@ -83,8 +83,8 @@ const HighestProduct = () => {
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-            <div className="trending">
-                <div className="container">
+            <div className="my-10">
+                <div >
                     <div className="title-btns">
                         <p className='text-lg font-bold'>Highest Cashback</p>
                         <div className="flex gap-2">

@@ -69,8 +69,8 @@ function OfferSection(props) {
         {/*</div>*/}
         {/*</div>*/}
         <div className='OfferSection  py-20   text-white text-center  '>
-            <div className='minutes flex justify-center align-middle  '>
-                <div className='hours text-center'>
+            <div className='minutes flex justify-center align-middle mb-6 font-bold'>
+                <div className='text-center'>
                     <div className='flex gap-1'>
                         <p className=' Offer-subdiv text-6xl p-2'>3</p>
                         <p className=' Offer-subdiv text-6xl p-2'>2</p>
@@ -80,7 +80,7 @@ function OfferSection(props) {
                 <div className='font-bold  text-3xl   align-middle'>
                     :
                 </div>
-                <div className='hours text-center'>
+                <div className='text-center '>
                     <div className='flex gap-1'>
                         <p className=' Offer-subdiv text-6xl p-2'>3</p>
                         <p className=' Offer-subdiv text-6xl p-2'>2</p>
@@ -89,16 +89,18 @@ function OfferSection(props) {
                 </div>
 
             </div>
-            <div className='mb-4 text-sm leading-3'>
+            <div className='mb-4 text-sm leading-3 py-3'>
                 <h2 className='text-3xl Offer-elColor font-bold pb-2'>
                     -40% on all Personal Care products
                 </h2>
-                <p>
-                    *Some explanation small text if needed displayed here. Lorem ipsum dolor sit amet,
-                </p>
-                <p>
-                    consectetur adipiscing elit. Donec lobortis egestas mi
-                </p>
+                <div className='py-2  '>
+                    <p>
+                        *Some explanation small text if needed displayed here. Lorem ipsum dolor sit amet,
+                    </p>
+                    <p>
+                        consectetur adipiscing elit. Donec lobortis egestas mi
+                    </p>
+                </div>
             </div>
             <button className='Offer-subdiv py-2 px-4 hover:bg-amber-800  rounded '>
                 Shop Now

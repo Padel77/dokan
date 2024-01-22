@@ -128,7 +128,7 @@ const CategorySlider = () => {
     return (
         <React.Fragment>
             <section
-                className="splide mx-auto max-w-[1200px] px-5 py-2"
+                className="splide px-5 py-2"
                 aria-label="Splide Basic HTML Example"
             >
                 <Splide options={splideOption}>

@@ -73,10 +73,6 @@
   outline: 2px solid rgba(0, 0, 0, 0.6);
 }
 
-.trending {
-  height: 100vh;
-}
-
 .item-header img {
   width: 21rem;
 }
