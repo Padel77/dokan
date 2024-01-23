@@ -100,7 +100,7 @@ const TopDeals = () => {
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-        <div className="my-10">
+        <div className="md:my-5 mx-3 ">
             <div>
                 <div className="title-btns">
                     <p className='text-lg font-bold'>Top Deals

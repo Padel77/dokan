@@ -100,7 +100,7 @@ const PopularProducts = () => {
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-        <div className="my-10 order-1">
+        <div className="md:my-5 mx-3 order-1 ">
             <div>
                 <div className="title-btns">
                     <p className='text-lg font-bold'>Most Popular Products</p>

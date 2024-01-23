@@ -22,7 +22,7 @@ function Home(props) {
     return (<>
             <NextSeo
                 title="Dokan"
-                description="PTS: A leading Investment firm that offers strategic advice to clients and partners in Egypt and the MEA Region with extensive experience and network."
+                description="Highlights key selling points, including the variety of products, emphasis on quality, the user-friendly interface, and the overall positive shopping experience. It also includes a call to action, encouraging visitors to start their shopping journey with Dokan."
             />
             <main className='sm:container lg:container-lg mx-auto '>
                 <MainHeader/>
