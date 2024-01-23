@@ -3,7 +3,6 @@ import { Metadata } from 'next';
 import Layout from "/layout";
 import {Quicksand} from 'next/font/google'
 import {Suspense} from "react";
-import Loading from "@/layout/loading";
 import Head from 'next/head';
 
 const quicksand = Quicksand({subsets: ['latin']})
