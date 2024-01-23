@@ -118,7 +118,7 @@ const CategorySlider = () => {
         },
     };
     return (<React.Fragment>
-            <div className='sm:hidden flex px-3 justify-between'>
+            <div className='sm:hidden flex px-6 justify-between'>
                 <p className="text-lg font-bold">Product Catalog</p>
                 <Link href="{/category}" className='text-red-600'>view all</Link>
             </div>
@@ -131,13 +131,14 @@ const CategorySlider = () => {
                     {data?.map((item) => (console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', item), <SplideSlide
                         key={item.id} className="splide__slide">
                         <div className="flex flex-col text-center pb-0 ">
-                            <div
-                                className="relative overflow-hidden aspect-w-4 "
-                                style={{
-                                    backgroundImage: `url(${item.image})`
-                                }}
-                            />
-                            <p>{item?.id}</p>
+                            {/*<div*/}
+                            {/*    className="relative overflow-hidden aspect-w-4 "*/}
+                            {/*    style={{*/}
+                            {/*        backgroundImage: `url(${item.image})`*/}
+                            {/*    }}*/}
+                            {/*/>*/}
+                            <img src={item.image} alt={item.name} className="w-full object-cover"/>
+                            <p>{item.name}</p>
                         </div>
                     </SplideSlide>))}
                 </Splide>

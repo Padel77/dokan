@@ -304,6 +304,8 @@ const PopularProducts = () => {
                         </Link>
                     </div>))}
                 </div>}
+                <button className='sm:hidden my-5 block bg-orange-600 hover:bg-orange-500 text-white w-full py-4 capitalize font-semibold rounded-md'>See All Product
+                </button>
             </div>
         </div>
     </>);
