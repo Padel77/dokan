@@ -38,13 +38,13 @@ function GiftSection(props) {
 
     </div>
             <div className='sm:hidden block '>
-                <div className='Giftsec3 flex justify-between rounded-xl py-2  m-3     text-white   '>
-                    <div className='mb-4 text-sm  leading-3  px-2'>
+                <div className='Giftsec3 flex justify-between rounded-xl py-2  m-3 px-3    text-white   '>
+                    <div className='mb-4 text-sm  leading-3  '>
                         <h2 className='text-2xl  font-bold pb-2  '>
                             Only in Dukan
                         </h2>
-                        <p className='text-gray-400 pb-2'>Specials</p>
-                        <button className='bg-green-900 absolute text-white px-20 py-4 capitalize font-semibold rounded-md'>Shop
+                        <p className='text-gray-400 pb-2'> Specials</p>
+                        <button className='bg-green-900 text-white px-6 py-4 capitalize font-semibold rounded-md'>Shop
                             Now
                         </button>
                     </div>
@@ -52,6 +52,7 @@ function GiftSection(props) {
                         <img src="/img/discountSec2.png" alt='cashback.svg'/>
                     </div>
                 </div>
+
                 <div className='Giftsec2 flex justify-between rounded-xl py-2  m-3 px-3    text-white   '>
                     <div className='mb-4 text-sm  leading-3  '>
                         <h2 className='text-2xl  font-bold pb-2  '>

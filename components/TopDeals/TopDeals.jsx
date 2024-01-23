@@ -9,28 +9,29 @@ import Loading from "@/layout/loading";
 const TopDeals = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true);
             try {
-                setLoading(true)
                 const response = await fetch('https://phpv8.aait-d.com/dukanv2/public/api/website/home');
                 const result = await response.json();
                 if (result.status == 'success') {
                     if (result.data[6].content.length > 0) {
                         setData(result.data[6].content);
                         setLoading(false)
-                        console.log('adel')
+                        console.log("Hight",result)
                     } else {
                         AiFillAlert('data fetching sucees but No Data Found')
                         setLoading(false)
                     }
                 }
-            } catch (e) {
+            } catch (error) {
+                console.error('Error fetching data:', error);
                 setLoading(false)
-                console.log(e)
             }
-            // console.log(result.data[3].content);
-        };
+
+        }
         fetchData();
     }, []);
     // useEffect(() => {
@@ -90,19 +91,20 @@ const TopDeals = () => {
     },];
 
     const slideLeft = () => {
-        let slider = document.getElementById("slider4");
+        let slider = document.getElementById("slider");
         slider.scrollLeft = slider.scrollLeft - 235;
     };
 
     const slideRight = () => {
-        let slider = document.getElementById("slider4");
+        let slider = document.getElementById("slider");
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-        <div className=" my-10">
-            <div className="">
-                    <p className='text-lg font-bold'>Top Deals</p>
+        <div className="my-10">
+            <div>
                 <div className="title-btns">
+                    <p className='text-lg font-bold'>Top Deals
+                    </p>
                     <div className="flex gap-2">
                         <button className='h-8 border p-1' title="scroll left" onClick={slideLeft}>
                             <AiOutlineArrowLeft/>
@@ -113,17 +115,15 @@ const TopDeals = () => {
                         </button>
                     </div>
                 </div>
-                {loading ? <Loading/>:
-                <div className="row-container" id="slider4">
-                    {data?.map((item) => (<div key={item.id} className="p-2">
+                {loading ? <Loading/> : <div className="row-container" id="slider">
+                    {filteredItems.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
                             <div className="ProductCard w-72 h-96 relative">
                                 <div
                                     className="Frame11338 w-72 h-56 px-5 py-3 left-0 top-[40px] absolute bg-white rounded justify-center items-center gap-2.5 inline-flex">
                                     <img
                                         className="ImageFrame w-56 h-56 relative rounded"
-                                        src={item.image}
-                                        alt="product"
+                                        src="https://via.placeholder.com/220x220"
                                     />
                                 </div>
                                 <div
@@ -172,20 +172,20 @@ const TopDeals = () => {
                                     className="Frame23 left-0 top-[370px] absolute flex-col justify-start items-start gap-1 inline-flex">
                                     <div className="Frame22 w-32 justify-start items-center gap-2 inline-flex">
                                         <div className="00Sar w-20">
-                                          <span className="text-zinc-950 text-xl font-bold font-['Quicksand'] leading-relaxed">
-                                            {item.price}
-                                          </span>
+              <span className="text-zinc-950 text-xl font-bold font-['Quicksand'] leading-relaxed">
+                25,
+              </span>
                                             <span
                                                 className="text-zinc-950 text-sm font-bold font-['Quicksand'] leading-tight">
-                                            {item.currency}
-                                          </span>
+                00 SAR
+              </span>
                                         </div>
                                     </div>
                                     <div
                                         className="PastaReggiaPenneZiti500gMoreInformation w-72 text-black text-base font-normal font-['Quicksand'] leading-tight">
                                         Pasta Reggia — Penne ziti, 500g
                                         <br/>
-                                        <span className='font-bold'>More information</span>
+                                        More information
                                     </div>
                                 </div>
                                 <svg
@@ -200,8 +200,8 @@ const TopDeals = () => {
                                         d="M25.9504 5.32554C22.3749 3.1323 19.2542 4.01615 17.3795 5.42402L17.3795 5.42403C16.6108 6.00128 16.2265 6.28991 16.0003 6.28991C15.7742 6.28991 15.3899 6.00128 14.6212 5.42402C12.7465 4.01615 9.62577 3.1323 6.05024 5.32554C1.35775 8.20391 0.295953 17.6998 11.1197 25.7111C13.1813 27.237 14.2121 28 16.0003 28C17.7886 28 18.8194 27.237 20.881 25.7111C31.7047 17.6998 30.6429 8.20391 25.9504 5.32554Z"
                                         stroke="#007460"
                                         strokeWidth="1.5"
-                                    />
                                         strokeLinecap="round"
+                                    />
                                 </svg>
                                 <div
                                     className="Group11579 w-72 left-0 top-[330px] absolute flex justify-between">

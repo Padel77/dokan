@@ -122,6 +122,7 @@ const CategorySlider = () => {
                 <p className="text-lg font-bold">Product Catalog</p>
                 <Link href="{/category}" className='text-red-600'>view all</Link>
             </div>
+
             {loading ? <Loading/> : <section
                 className="splide px-5 py-2 my-10"
                 aria-label="Splide Basic HTML Example"

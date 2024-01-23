@@ -33,9 +33,9 @@ const Carousel = ({ images }) => {
                 {images.map((image, index) => (
                     <div key={index} className="relative block">
                         <img src={image} alt={`Slide ${index + 1}`} className="w-screen" />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold">
-                            Slide {index + 1} Content
-                        </div>
+                        {/*<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold">*/}
+                        {/*    Slide {index + 1} Content*/}
+                        {/*</div>*/}
                     </div>
                 ))}
             </Slider>
