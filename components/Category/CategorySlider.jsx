@@ -1,10 +1,12 @@
 "use client";
-import React, {useEffect} from "react";
+import React, {useState,useEffect} from "react";
 import { Rating as ReactRating } from "@smastrom/react-rating";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@smastrom/react-rating/style.css";
 import "@splidejs/splide/dist/css/splide.min.css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css"; // Add the default theme CSS
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import Loading from "@/layout/loading";
+import Link from "next/link"; // Add the default theme CSS
 
 const products = [
     {
@@ -64,8 +66,8 @@ const products = [
     {
         id: 7,
         name: "Samsung Galaxy Book",
-        price: 1499,
         discountPercentage: 4.15,
+        price: 1499,
         rating: 4.25,
         imageSrc: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
         quantity: 1,
@@ -91,21 +93,27 @@ const products = [
 ];
 
 const CategorySlider = () => {
-    const [data, setData] = React.useState([]);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true)
             try {
             const response = await fetch('https://phpv8.aait-d.com/dukanv2/public/api/website/home');
             const result = await response.json();
             if (result.status === 'success') {
                 if (result.data[3].content.length > 0) {
                     setData(result.data[3].content);
+                    console.log("category",result.data[3].content);
+                    setLoading(false)
                 } else {
-                    alert('data fetching success but no category found')
+                    setLoading(false)
+                    return('data fetching success but no category found')
                 }
             }
             }catch (e) {
                 console.log(e)
+                setLoading(false)
             }
             // console.log(result.data[3].content);
         };
@@ -127,58 +135,31 @@ const CategorySlider = () => {
     };
     return (
         <React.Fragment>
+            <div className='sm:hidden flex px-3 justify-between'>
+                <p className="text-lg font-bold">Product Catalog</p>
+                <Link href="{/category}" className='text-red-600'>view all</Link>
+            </div>
             <section
-                className="splide px-5 py-2"
+                className="splide px-5 py-2 my-10"
                 aria-label="Splide Basic HTML Example"
             >
+            {loading? <Loading/>:
                 <Splide options={splideOption}>
-                    {data.map((item) => (
+                    {products?.map((item) => (
                         console.log(item),
                         <SplideSlide key={item.id} className="splide__slide">
-                            <div className="flex flex-col ">
+                            <div className="flex flex-col text-center pb-0 ">
                                 <div
-                                    className="relative overflow-hidden aspect-w-4 aspect-h-5"
+                                    className="relative overflow-hidden aspect-w-4 "
                                     style={{
-                                        backgroundImage: `url(${item.image})`,
-                                        backgroundSize: "cover",
-                                        backgroundPosition: "center",
-                                        height: "200px",
-                                    }}
+                                        backgroundImage: `url(${item.imageSrc})`}}
                                 />
-{/*                                <img*/}
-{/*src={item.image}*/}
-{/*                                    alt="product"*/}
-{/*                                    className="absolute top-0 left-0 w-full h-full object-cover"*/}
-{/*                                />  */}
-                                <div>
-                                    <p className="mt-2">{item.name}</p>
-                    {/*                <p className="font-medium text-violet-900">*/}
-                    {/*                    {product.price}*/}
-                    {/*                    <span className="text-sm text-gray-500 line-through">*/}
-                    {/*  {product.discountedPrice}*/}
-                    {/*</span>*/}
-                    {/*                </p>*/}
-                    {/*                <div className="flex items-center">*/}
-                    {/*                    <ReactRating*/}
-                    {/*                        ReactRating*/}
-                    {/*                        style={{ maxWidth: 100 }}*/}
-                    {/*                        value={product.rating}*/}
-                    {/*                        readOnly*/}
-                    {/*                    />*/}
-                    {/*                    <p className="text-sm text-gray-400">*/}
-                    {/*                        ({product.quantity})*/}
-                    {/*                    </p>*/}
-                    {/*                </div>*/}
-                    {/*                <div>*/}
-                    {/*                    <button className="my-5 h-10 w-full bg-violet-900 text-white">*/}
-                    {/*                        Add to cart*/}
-                    {/*                    </button>*/}
-                    {/*                </div>*/}
-                                </div>
+                                <p>{item?.name}</p>
+
                             </div>
                         </SplideSlide>
                     ))}
-                </Splide>
+                </Splide>}
             </section>
         </React.Fragment>
     );

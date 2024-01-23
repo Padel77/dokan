@@ -3,25 +3,31 @@ import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import {AiFillAlert, AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import {PlusCircleIcon} from "@heroicons/react/24/outline";
+import Loading from "@/layout/loading";
 // import api from '../../utils/api';
 
 const PersonalCare = () => {
     const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true)
             try {
                 const response = await fetch('https://phpv8.aait-d.com/dukanv2/public/api/website/home');
                 const result = await response.json();
                 if (result.status == 'success') {
                     if (result.data[6].content.length > 0) {
                         setData(result.data[6].content);
+                        setLoading(false)
                         console.log('adel')
                     } else {
                         AiFillAlert('data fetching sucees but No Data Found')
+                        setLoading(false)
                     }
                 }
             } catch (e) {
+                setLoading(false)
                 console.log(e)
             }
             // console.log(result.data[3].content);
@@ -41,56 +47,56 @@ const PersonalCare = () => {
     //     fetchData();
     // }, []);
 
-
-    const filteredItems = [{
-        id: 1,
-        img: "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "camera",
-        price: 200,
-    }, {
-        id: 2,
-        img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "Phone",
-        price: 100,
-    }, {
-        id: 3,
-        img: "https://images.pexels.com/photos/12753820/pexels-photo-12753820.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "Laptop",
-        price: 500,
-    }, {
-        id: 4,
-        img: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "Headephone",
-        price: 40,
-    }, {
-        id: 5,
-        img: "https://images.pexels.com/photos/163117/keyboard-white-computer-keyboard-desktop-163117.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "Keyboard",
-        price: 140,
-    }, {
-        id: 6,
-        img: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "Gaming Mouse",
-        price: 140,
-    }, {
-        id: 7,
-        img: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "Gaming Mouse",
-        price: 140,
-    }, {
-        id: 8,
-        img: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=600",
-        description: "Gaming Mouse",
-        price: 140,
-    },];
+    //
+    // const filteredItems = [{
+    //     id: 1,
+    //     img: "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "camera",
+    //     price: 200,
+    // }, {
+    //     id: 2,
+    //     img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "Phone",
+    //     price: 100,
+    // }, {
+    //     id: 3,
+    //     img: "https://images.pexels.com/photos/12753820/pexels-photo-12753820.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "Laptop",
+    //     price: 500,
+    // }, {
+    //     id: 4,
+    //     img: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "Headephone",
+    //     price: 40,
+    // }, {
+    //     id: 5,
+    //     img: "https://images.pexels.com/photos/163117/keyboard-white-computer-keyboard-desktop-163117.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "Keyboard",
+    //     price: 140,
+    // }, {
+    //     id: 6,
+    //     img: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "Gaming Mouse",
+    //     price: 140,
+    // }, {
+    //     id: 7,
+    //     img: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "Gaming Mouse",
+    //     price: 140,
+    // }, {
+    //     id: 8,
+    //     img: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=600",
+    //     description: "Gaming Mouse",
+    //     price: 140,
+    // },];
 
     const slideLeft = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("slider3");
         slider.scrollLeft = slider.scrollLeft - 235;
     };
 
     const slideRight = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("slider3");
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
@@ -108,8 +114,8 @@ const PersonalCare = () => {
                         </button>
                     </div>
                 </div>
-
-                <div className="row-container" id="slider">
+                {loading ? <Loading/>:
+                <div className="row-container" id="slider3">
                     {data?.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
                             <div className="ProductCard w-72 h-96 relative">
@@ -299,7 +305,7 @@ const PersonalCare = () => {
                             </div>
                         </Link>
                     </div>))}
-                </div>
+                </div>}
             </div>
         </div>
     </>);

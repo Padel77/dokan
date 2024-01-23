@@ -3,6 +3,7 @@ import {Disclosure} from '@headlessui/react'
 import {Bars3Icon, BellIcon, HeartIcon, ShoppingCartIcon, UserIcon, XMarkIcon} from '@heroicons/react/24/outline'
 import {CiBarcode} from "react-icons/ci";
 import {FaWhatsapp} from "react-icons/fa";
+import Link from "next/link";
 
 const navigation = [{name: 'All categories', href: '#', current: true}, {
     name: 'Highest cashaback', href: '#', current: false
@@ -117,7 +118,7 @@ function MainHeader(props) {
                 <div >
                     <div className="relative flex  items-center justify-between">
                         <div
-                            className="lg:flex block md:gap-8 gap-5  flex-1  lg:mx-2 mx-8  items-center justify-center sm:items-stretch sm:justify-start">
+                            className="lg:flex block md:gap-8 gap-5  flex-1  lg:mx-2 mx-4  items-center justify-center sm:items-stretch sm:justify-start">
                             <div className="  flex-shrink-0 items-center mb-3">
                                 <div className="lg:hidden flex inset-y-0 justify-between     items-center ">
                                     <div className='flex '>
@@ -136,7 +137,7 @@ function MainHeader(props) {
                                     />
                                     </div>
                                     <div className='flex '>
-                                        <div className=" text-sm Bright-Orange block sm:hidden   ">
+                                        <div className=" text-sm Bright-Orange block lg:hidden   ">
                                             SAR 124,00
                                         </div>
 
@@ -156,7 +157,7 @@ function MainHeader(props) {
                                     alt="Your Company"
                                 />
                             </div>
-                            <form>
+                            <form className='lg:block  '>
                                 <label htmlFor="default-search"
                                        className="mb-2  text-sm font-medium text-gray-900 sr-only white:text-dark">Search</label>
                                 <div className="relative">
@@ -177,6 +178,7 @@ function MainHeader(props) {
                                             className=" text-xl absolute end-1 bottom-1  focus:ring-4 focus:outline-none focus:ring-light-300  rounded-lg px-4 py-2 dark:bg-light-600 dark:hover:bg-light-700 dark:focus:ring-light-800">
                                         <CiBarcode className=''/>
                                     </button>
+
                                 </div>
                             </form>
 
@@ -190,7 +192,7 @@ function MainHeader(props) {
                                     <div className='text-sm leading-3'>
                                         <span className=" text-gray-800">Delivery to:</span>
                                         <div className='font-bold leading-5'>
-                                            <p className=""> Sulaimaniyah Dist, 455 Riyad Saud... </p>
+                                        <p className=""> Sulaimaniyah Dist, 455 Riyad Saud... </p>
                                             <p className="">(30-45 mins)</p>
                                         </div>
                                     </div>
@@ -210,38 +212,40 @@ function MainHeader(props) {
                         </div>
                         <div
                             className="lg:flex hidden absolute inset-y-0  top-0 right-0  gap-3 items-center pr-2 sm:static sm:inset-auto ">
-                            <button
+                            <Link href={`/login`}
                                 type="button"
                                 className="sm:block hidden  relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >
                                 <span className="absolute -inset-1.5"/>
                                 <span className="sr-only">View notifications</span>
                                 <BellIcon className="h-6 w-6" aria-hidden="true"/>
-                            </button>
-                            <button
+                            </Link>
+                            <Link href={`/login`}
                                 type="button"
                                 className=" sm:block hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >
                                 <span className="absolute -inset-1.5"/>
                                 <span className="sr-only">View Profile</span>
+
                                 <UserIcon className="h-6 w-6" aria-hidden="true"/>
-                            </button>
-                            <button
+
+                            </Link>
+                            <Link href={`/login`}
                                 type="button"
                                 className="sm:block hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >
                                 <span className="absolute -inset-1.5"/>
                                 <span className="sr-only">View Favoirate</span>
                                 <HeartIcon className="h-6 w-6" aria-hidden="true"/>
-                            </button>
-                            <button
+                            </Link>
+                            <Link href={`/login`}
                                 type="button"
                                 className="sm:block hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >
                                 <span className="absolute -inset-1.5"/>
                                 <span className="sr-only">View Shopping Cart</span>
                                 <ShoppingCartIcon className="h-6 w-6" aria-hidden="true"/>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -12,11 +12,14 @@ const Carousel = ({ images }) => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 100,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,        // Enable autoplay
+        autoplaySpeed: 2000,   // Set the autoplay interval in milliseconds (2 seconds in this case)
         beforeChange: (current, next) => setActiveIndex(next),
     };
+
 
     const goToSlide = (index) => {
         if (sliderRef.current) {
@@ -37,7 +40,7 @@ const Carousel = ({ images }) => {
                 ))}
             </Slider>
 
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+            <div className="absolute bottom-4 sm:flex hidden left-1/2 transform -translate-x-1/2 flex gap-2">
                 {images.map((_, index) => (
                     <div
                         key={index}

@@ -69,7 +69,7 @@ function OfferSection(props) {
         {/*</div>*/}
         {/*</div>*/}
         <div className='OfferSection  py-20   text-white text-center  '>
-            <div className='minutes flex justify-center align-middle mb-6 font-bold'>
+            <div className='minutes flex gap-1 justify-center align-middle mb-6 font-bold'>
                 <div className='text-center'>
                     <div className='flex gap-1'>
                         <p className=' Offer-subdiv text-6xl p-2'>3</p>
@@ -77,7 +77,7 @@ function OfferSection(props) {
                     </div>
                     <p className='text-sm'>hours</p>
                 </div>
-                <div className='font-bold  text-3xl   align-middle'>
+                <div className='font-bold  text-3xl  pt-4  align-middle'>
                     :
                 </div>
                 <div className='text-center '>

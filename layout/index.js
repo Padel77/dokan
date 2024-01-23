@@ -10,13 +10,7 @@ export default function Layout({ children }) {
     return (
         <Fragment>
             <Suspense fallback={<Loading/>}>
-            {/*<MainHeader className="sticky" />*/}
-            <div className='sm:container lg:container-lg mx-auto'>
-                <MainHeader/>
                 <main>{children}</main>
-                {/*<Footer />*/}
-                </div>
-                <Footer/>
             </Suspense>
 
         </Fragment>

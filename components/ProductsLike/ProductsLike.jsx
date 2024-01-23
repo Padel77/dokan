@@ -3,25 +3,30 @@ import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import {AiFillAlert, AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import {PlusCircleIcon} from "@heroicons/react/24/outline";
+import Loading from "@/layout/loading";
 // import api from '../../utils/api';
 
 const ProductsLike = () => {
     const [data, setData] = useState(null);
-
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const fetchData = async () => {
             try {
+                setLoading(true)
                 const response = await fetch('https://phpv8.aait-d.com/dukanv2/public/api/website/home');
                 const result = await response.json();
                 if (result.status == 'success') {
                     if (result.data[6].content.length > 0) {
                         setData(result.data[6].content);
+                        setLoading(false)
                         console.log('adel')
                     } else {
                         AiFillAlert('data fetching sucees but No Data Found')
+                        setLoading(false)
                     }
                 }
             } catch (e) {
+                setLoading(false)
                 console.log(e)
             }
             // console.log(result.data[3].content);
@@ -85,12 +90,12 @@ const ProductsLike = () => {
     },];
 
     const slideLeft = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("slider4");
         slider.scrollLeft = slider.scrollLeft - 235;
     };
 
     const slideRight = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("slider4");
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
@@ -108,8 +113,8 @@ const ProductsLike = () => {
                         </button>
                     </div>
                 </div>
-
-                <div className="row-container" id="slider">
+                {loading ? <Loading/>:
+                <div className="row-container" id="slider4">
                     {data?.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
                             <div className="ProductCard w-72 h-96 relative">
@@ -299,7 +304,7 @@ const ProductsLike = () => {
                             </div>
                         </Link>
                     </div>))}
-                </div>
+                </div>}
             </div>
         </div>
     </>);

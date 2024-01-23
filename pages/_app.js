@@ -10,7 +10,6 @@ const quicksand = Quicksand({subsets: ['latin']})
 function MyApp({ Component, pageProps }) {
     return (
         <Layout className={quicksand.className}>
-
                 <Component {...pageProps} />
         </Layout>
     );
