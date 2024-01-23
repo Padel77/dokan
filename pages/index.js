@@ -17,6 +17,8 @@ import Loading from "@/layout/loading";
 import BannerSection from "@/components/BannerSection/BannerSection";
 import WeekOffer from "@/components/WeekOffer/WeekOffer";
 import StickyFooter from "@/components/StickyFooter/StickyFooter";
+import PopularProducts from "@/components/PopularProducts/PopularProducts";
+import GiftSection from "@/components/GiftSection/GiftSection";
 function Home(props) {
     const images = [
         './img/Hero.png',
@@ -35,6 +37,8 @@ function Home(props) {
             <BannerSection/>
             {/*<HeadCarousel />*/}
             <HighestProduct/>
+            <GiftSection/>
+            <PopularProducts/>
             <WeekOffer/>
             <OfferSection/>
             <PersonalCare/>

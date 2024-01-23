@@ -278,7 +278,7 @@ function MainHeader(props) {
                 </div>
             </Disclosure.Panel>
             <div className="lg:block hidden sm:ml-6  border-b-2">
-                <div className="flex sm:space-x-10 space-x-6">
+                <div className="flex sm:space-x-4 space-x-12">
                     {navigation.map((item) => (<a
                         key={item.name}
                         href={item.href}

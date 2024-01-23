@@ -15,6 +15,7 @@
   --Edible-Passion-Orange: #FF4300;
   --text-trancform: capitalize;
   --Sky-Breeze-Turquoise-Dark-Variant: #00A9A2;
+   --Light-Green: #D5F07D;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,9 +32,9 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-/*@layer utilities {*/
 /*  .text-balance {*/
 /*    text-wrap: balance;*/
+/*@layer utilities {*/
 /*  }*/
 /*}*/
 
@@ -51,6 +52,13 @@ body {
 }
 .Bright-Orange{
   background-color: var(--Bright-Orange);
+}
+.Giftsec{
+  background-color: var(--Light-Green);
+}
+.Giftsec2{
+  background-color: var(--Rich-Ground-Green);
+
 }
 /* global */
 .container {
