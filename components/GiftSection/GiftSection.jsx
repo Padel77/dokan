@@ -37,22 +37,37 @@ function GiftSection(props) {
         </div>
 
     </div>
-    <div className='sm:hidden block '>
-        <div className='Giftsec2 flex justify-between rounded-xl py-2  m-3 px-3    text-white   '>
-            <div className='mb-4 text-sm  leading-3  '>
-                <h2 className='text-2xl  font-bold pb-2  '>
-                    Up to 50% discount
-                </h2>
-                <p className='text-gray-400 pb-2'>Household Essentials</p>
-                <button className='bg-orange-600 text-white px-12 py-4 capitalize font-semibold rounded-md'>Shop Now
-                </button>
-            </div>
-            <div>
-                <img src="/img/discountSec.png" alt='cashback.svg'/>
-            </div>
-        </div>
+            <div className='sm:hidden block '>
+                <div className='Giftsec3 flex justify-between rounded-xl py-2  m-3     text-white   '>
+                    <div className='mb-4 text-sm  leading-3  px-2'>
+                        <h2 className='text-2xl  font-bold pb-2  '>
+                            Only in Dukan
+                        </h2>
+                        <p className='text-gray-400 pb-2'>Specials</p>
+                        <button className='bg-green-900 absolute text-white px-20 py-4 capitalize font-semibold rounded-md'>Shop
+                            Now
+                        </button>
+                    </div>
+                    <div>
+                        <img src="/img/discountSec2.png" alt='cashback.svg'/>
+                    </div>
+                </div>
+                <div className='Giftsec2 flex justify-between rounded-xl py-2  m-3 px-3    text-white   '>
+                    <div className='mb-4 text-sm  leading-3  '>
+                        <h2 className='text-2xl  font-bold pb-2  '>
+                            Up to 50% discount
+                        </h2>
+                        <p className='text-gray-400 pb-2'>Household Essentials</p>
+                        <button className='bg-orange-600 text-white px-12 py-4 capitalize font-semibold rounded-md'>Shop
+                            Now
+                        </button>
+                    </div>
+                    <div>
+                        <img src="/img/discountSec.png" alt='cashback.svg'/>
+                    </div>
+                </div>
 
-    </div>
+            </div>
         </>
     )
 }

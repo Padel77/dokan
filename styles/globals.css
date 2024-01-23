@@ -16,6 +16,7 @@
   --text-trancform: capitalize;
   --Sky-Breeze-Turquoise-Dark-Variant: #00A9A2;
    --Light-Green: #D5F07D;
+   --Sky-Breeze-Turquoise-Light-Variant: #DCF3F3;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,9 +26,9 @@
     --background-end-rgb: 0, 0, 0;
     --font-family : Quicksand;
     text-transform: capitalize;
-  }
 }
 
+  }
 body {
   color: rgb(var(--foreground-rgb));
 }
@@ -58,7 +59,10 @@ body {
 }
 .Giftsec2{
   background-color: var(--Rich-Ground-Green);
-
+}
+.Giftsec3{
+  color: var(--Rich-Ground-Green);
+  background-color: var(--Sky-Breeze-Turquoise-Light-Variant);
 }
 /* global */
 .container {

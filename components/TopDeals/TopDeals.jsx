@@ -101,8 +101,8 @@ const TopDeals = () => {
     return (<>
         <div className=" my-10">
             <div className="">
-                <div className="title-btns">
                     <p className='text-lg font-bold'>Top Deals</p>
+                <div className="title-btns">
                     <div className="flex gap-2">
                         <button className='h-8 border p-1' title="scroll left" onClick={slideLeft}>
                             <AiOutlineArrowLeft/>

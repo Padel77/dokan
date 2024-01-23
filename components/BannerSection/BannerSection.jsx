@@ -33,8 +33,8 @@ function BannerSection(props) {
         </div>
 
     </div>
-    <div className='sm:hidden block '>
-        <div className='BannerSection flex justify-between  px-16 py-6 m-3   text-white   '>
+    <div className='sm:hidden block  '>
+        <div className='BannerSection rounded-lg flex justify-between  px-16 py-6 m-3   text-white   '>
             <div className='mb-4 text-sm leading-3 py-3 '>
                 <h2 className='text-3xl  font-bold pb-2  '>
                     Back to school!
