@@ -70,18 +70,18 @@ const WeekOffer = () => {
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-        <div className="my-10">
-                <div className=" mx-auto text-center">
+        <div className="sm:my-10 my-0">
+                <div className="sm:block hidden mx-auto text-center">
                     <p className='text-lg font-bold'>This week offers</p>
                 </div>
                 <div className="row-container" id="slider1">
                     {filteredItems.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
-                            <div className=" w-96 h-52 relative">
+                            <div className=" w-96 h-56 relative">
                                 <div
                                     className="Frame11338 w-full h-full   left-0  absolute bg-white rounded justify-center items-center  inline-flex">
                                     <img
-                                        className=" h-full  rounded"
+                                        className=" h-full   rounded"
                                         src={item.img}
                                     />
                                 </div>
@@ -90,7 +90,7 @@ const WeekOffer = () => {
                     </div>))}
 
                 </div>
-                <div className="flex justify-center ">
+                <div className="sm:flex hidden justify-center text-xl ">
                     <button className='text-indigo-400  p-2' title="scroll left" onClick={slideLeft}>
                         <AiOutlineArrowLeft/>
                     </button>

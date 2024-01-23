@@ -6,7 +6,7 @@ import {PlusCircleIcon} from "@heroicons/react/24/outline";
 import Loading from "@/layout/loading";
 // import api from '../../utils/api';
 
-const ProductsLike = () => {
+const TopDeals = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -102,7 +102,7 @@ const ProductsLike = () => {
         <div className="sm:block hidden  my-10">
             <div className="">
                 <div className="title-btns">
-                    <p className='text-lg font-bold'>Products You May Like</p>
+                    <p className='text-lg font-bold'>Top Deals</p>
                     <div className="flex gap-2">
                         <button className='h-8 border p-1' title="scroll left" onClick={slideLeft}>
                             <AiOutlineArrowLeft/>
@@ -309,4 +309,4 @@ const ProductsLike = () => {
         </div>
     </>);
 };
-export default ProductsLike;
+export default TopDeals;

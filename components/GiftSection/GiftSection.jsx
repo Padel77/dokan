@@ -38,13 +38,13 @@ function GiftSection(props) {
 
     </div>
     <div className='sm:hidden block '>
-        <div className='Giftsec2 flex justify-between rounded-xl   m-3 px-3 py-0   text-white   '>
-            <div className='mb-4 text-sm  leading-3  py-4'>
+        <div className='Giftsec2 flex justify-between rounded-xl py-2  m-3 px-3    text-white   '>
+            <div className='mb-4 text-sm  leading-3  '>
                 <h2 className='text-2xl  font-bold pb-2  '>
                     Up to 50% discount
                 </h2>
                 <p className='text-gray-400 pb-2'>Household Essentials</p>
-                <button className='bg-orange-600 text-white px-10 py-4 capitalize font-semibold rounded-md'>Shop Now
+                <button className='bg-orange-600 text-white px-12 py-4 capitalize font-semibold rounded-md'>Shop Now
                 </button>
             </div>
             <div>

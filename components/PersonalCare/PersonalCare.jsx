@@ -100,7 +100,7 @@ const PersonalCare = () => {
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-        <div className="my-10">
+        <div className="sm:block hidden my-10">
             <div className="">
                 <div className="title-btns">
                     <p className='text-lg font-bold'>Personal Care</p>
