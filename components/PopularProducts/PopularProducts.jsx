@@ -20,7 +20,7 @@ const PopularProducts = () => {
                     if (result.data[6].content.length > 0) {
                         setData(result.data[6].content);
                         setLoading(false)
-                        console.log("Hight",result)
+                        console.log("Hight", result)
                     } else {
                         AiFillAlert('data fetching sucees but No Data Found')
                         setLoading(false)
@@ -304,7 +304,9 @@ const PopularProducts = () => {
                         </Link>
                     </div>))}
                 </div>}
-                <button className='sm:hidden my-5 block bg-orange-600 hover:bg-orange-500 text-white w-full py-4 capitalize font-semibold rounded-md'>See All Product
+                <button
+                    className='sm:hidden my-5 block bg-orange-600 hover:bg-orange-500 text-white w-full py-4 capitalize font-semibold rounded-md'>See
+                    All Product
                 </button>
             </div>
         </div>
