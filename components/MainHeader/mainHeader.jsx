@@ -212,7 +212,7 @@ function MainHeader(props) {
                         </div>
                         <div
                             className="lg:flex hidden absolute inset-y-0  top-0 right-0  gap-3 items-center pr-2 sm:static sm:inset-auto ">
-                            <Link href={`/login`}
+                            <Link href={`/register`}
                                 type="button"
                                 className="sm:block hidden  relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >
@@ -220,7 +220,7 @@ function MainHeader(props) {
                                 <span className="sr-only">View notifications</span>
                                 <BellIcon className="h-6 w-6" aria-hidden="true"/>
                             </Link>
-                            <Link href={`/login`}
+                            <Link href={`/register`}
                                 type="button"
                                 className=" sm:block hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >
@@ -230,7 +230,7 @@ function MainHeader(props) {
                                 <UserIcon className="h-6 w-6" aria-hidden="true"/>
 
                             </Link>
-                            <Link href={`/login`}
+                            <Link href={`/register`}
                                 type="button"
                                 className="sm:block hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >
@@ -238,7 +238,7 @@ function MainHeader(props) {
                                 <span className="sr-only">View Favoirate</span>
                                 <HeartIcon className="h-6 w-6" aria-hidden="true"/>
                             </Link>
-                            <Link href={`/login`}
+                            <Link href={`/register`}
                                 type="button"
                                 className="sm:block hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                             >

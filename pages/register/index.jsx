@@ -1,5 +1,5 @@
 import React from "react";
-export default function Login() {
+export default function Register() {
   return (
     <div
       className="register flex w-full h-screen  justify-center items-center "
