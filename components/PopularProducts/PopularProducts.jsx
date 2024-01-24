@@ -44,12 +44,12 @@ const PopularProducts = () => {
     // }, []);
 
     const slideLeft = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("sliderB");
         slider.scrollLeft = slider.scrollLeft - 235;
     };
 
     const slideRight = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("sliderB");
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
@@ -67,7 +67,7 @@ const PopularProducts = () => {
                         </button>
                     </div>
                 </div>
-                {loading ? <Loading/> : <div className="row-container" id="slider">
+                {loading ? <Loading/> : <div className="row-container" id="sliderB">
                     {data.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
                             <div className="ProductCard w-72 h-96 relative">

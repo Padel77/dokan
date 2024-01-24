@@ -49,12 +49,12 @@ const HighestProduct = () => {
 
 
     const slideLeft = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("sliderC");
         slider.scrollLeft = slider.scrollLeft - 235;
     };
 
     const slideRight = () => {
-        let slider = document.getElementById("slider");
+        let slider = document.getElementById("sliderC");
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
@@ -72,7 +72,7 @@ const HighestProduct = () => {
                         </button>
                     </div>
                 </div>
-                {loading ? <Loading/> : <div className="row-container" id="slider">
+                {loading ? <Loading/> : <div className="row-container" id="sliderC">
                     {data.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
                             <div className="ProductCard w-72 h-96 relative">
