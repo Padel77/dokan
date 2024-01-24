@@ -25,7 +25,7 @@ const products = [{
     rating: 4.44,
     imageSrc: "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
     quantity: 1,
-}, , {
+}, {
     id: 3,
     name: "OPPOF19",
     price: 280,

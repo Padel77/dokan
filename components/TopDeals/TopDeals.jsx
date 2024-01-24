@@ -45,12 +45,12 @@ const TopDeals = () => {
     // }, []);
 
     const slideLeft = () => {
-        let slider = document.getElementById("sliderTop");
+        let slider = document.getElementById("slider");
         slider.scrollLeft = slider.scrollLeft - 235;
     };
 
     const slideRight = () => {
-        let slider = document.getElementById("sliderTop");
+        let slider = document.getElementById("slider");
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
@@ -69,8 +69,8 @@ const TopDeals = () => {
                         </button>
                     </div>
                 </div>
-                {loading ? <Loading/> : <div className="row-container" id="sliderTop">
-                    {data?.map((item) => (<div key={item.id} className="p-2">
+                {loading ? <Loading/> : <div className="row-container" id="slider">
+                    {data.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
                             <div className="ProductCard w-72 h-96 relative">
                                 <div
