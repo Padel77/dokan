@@ -24,16 +24,8 @@ const products = [{
     rating: 4.44,
     imageSrc: "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
     quantity: 1,
-}, {
+}, , {
     id: 3,
-    name: "Samsung Universe 9",
-    price: 1249,
-    discountPercentage: 15.46,
-    rating: 4.09,
-    imageSrc: "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-    quantity: 1,
-}, {
-    id: 4,
     name: "OPPOF19",
     price: 280,
     discountPercentage: 17.91,
@@ -41,7 +33,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
     quantity: 1,
 }, {
-    id: 5,
+    id: 4,
     name: "Huawei P30",
     price: 499,
     discountPercentage: 10.58,
@@ -49,7 +41,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
     quantity: 1,
 }, {
-    id: 6,
+    id: 5,
     name: "MacBook Pro",
     price: 1749,
     discountPercentage: 11.02,
@@ -57,7 +49,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/6/thumbnail.png",
     quantity: 1,
 }, {
-    id: 7,
+    id: 6,
     name: "Samsung Galaxy Book",
     discountPercentage: 4.15,
     price: 1499,
@@ -65,7 +57,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
     quantity: 1,
 }, {
-    id: 8,
+    id: 7,
     name: "Microsoft Surface Laptop 4",
     price: 1499,
     discountPercentage: 10.23,
@@ -74,7 +66,7 @@ const products = [{
     quantity: 1,
 }, {
     name: "Infinix INBOOK",
-    id: 9,
+    id: 8,
     price: 1099,
     discountPercentage: 11.83,
     rating: 4.54,
