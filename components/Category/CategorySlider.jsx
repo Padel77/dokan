@@ -6,6 +6,7 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import Link from "next/link";
 import Loading from "@/layout/loading";
+import ProductsLike from "@/components/ProductsLike/ProductsLike";
 
 const products = [{
     id: 1,
@@ -109,7 +110,7 @@ const CategorySlider = () => {
     }, []);
 
     const splideOption = {
-        type: "loop", focus: 0, gap: "1rem", perPage: 4, breakpoints: {
+        type: "loop",textAlign : "center", focus: 0, gap: "1rem", perPage: 6, breakpoints: {
             640: {
                 perPage: 2,
             }, 480: {
@@ -118,31 +119,25 @@ const CategorySlider = () => {
         },
     };
     return (<React.Fragment>
-            <div className='sm:hidden flex px-6 justify-between'>
-                <p className="text-lg font-bold">Product Catalog</p>
-                <Link href="{/category}" className='text-red-600'>view all</Link>
-            </div>
+        <div className='sm:hidden flex px-6 justify-between'>
+            <p className="text-lg font-bold">Product Catalog</p>
+            <Link href="{/category}" className='text-red-600'>view all</Link>
+        </div>
 
-            {loading ? <Loading/> : <section
-                className="splide px-5 py-2 my-10"
-                aria-label="Splide Basic HTML Example"
-            >
-                <Splide options={splideOption}>
-                    {data?.map((item) => (console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', item), <SplideSlide
-                        key={item.id} className="splide__slide">
-                        <div className="flex flex-col text-center pb-0 ">
-                            {/*<div*/}
-                            {/*    className="relative overflow-hidden aspect-w-4 "*/}
-                            {/*    style={{*/}
-                            {/*        backgroundImage: `url(${item.image})`*/}
-                            {/*    }}*/}
-                            {/*/>*/}
-                            <img src={item.image} alt={item.name} className="w-full object-cover"/>
-                            <p>{item.name}</p>
-                        </div>
-                    </SplideSlide>))}
-                </Splide>
-            </section>}
+        {loading ? <Loading/> : <section
+            className="splide px-5 py-2 my-10"
+            aria-label="Splide Basic HTML Example"
+        >
+            <Splide options={splideOption}>
+                {products?.map((item) => (<SplideSlide
+                    key={item.id} className="splide__slide">
+                    <div className="flex flex-col text-center pb-0 ">
+                        <img src={item.imageSrc} alt={item.name} className="relative overflow-hidden aspect-w-3 h-25"/>
+                        <p>{item.name}</p>
+                    </div>
+                </SplideSlide>))}
+            </Splide>
+        </section>}
     </React.Fragment>);
 };
 

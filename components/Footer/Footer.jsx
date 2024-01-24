@@ -68,13 +68,13 @@ export default function Footer() {
               </svg>
               <div className="Frame340 w-14 h-4 justify-start items-center gap-2 inline-flex md:hidden ">
                 <div className="Frame162 justify-start items-center gap-1 flex">
-                  <div className="Ar text-right text-white text-opacity-50 text-sm font-semibold font-['Quicksand']">
+                  <div className="Ar text-right text-white text-opacity-50 text-sm font-semibold ">
                     AR
                   </div>
                 </div>
                 <div className="Rectangle8 w-px h-4 bg-white rounded-lg" />
                 <div className="Frame163 justify-start items-center gap-1 flex">
-                  <div className="En text-right text-white text-sm font-semibold font-['Quicksand']">
+                  <div className="En text-right text-white text-sm font-semibold ">
                     EN
                   </div>
                 </div>
@@ -273,70 +273,70 @@ export default function Footer() {
           </ul>
           <ul className="mt-[2rem]">
             <div className="Frame336 w-28  h-52 relative">
-              <div className="AboutCompany left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold font-['Quicksand'] leading-none">
+              <div className="AboutCompany left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold  leading-none">
                 About Company
               </div>
-              <div className="AboutUs left-0 top-[30px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="AboutUs left-0 top-[30px] absolute text-white text-base font-medium  leading-tight">
                 About Us
               </div>
-              <div className="News left-0 top-[65px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="News left-0 top-[65px] absolute text-white text-base font-medium  leading-tight">
                 News
               </div>
-              <div className="StoreLocations left-0 top-[100px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="StoreLocations left-0 top-[100px] absolute text-white text-base font-medium  leading-tight">
                 Store locations
               </div>
               <div className="Careers left-0 top-[135px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
                 Careers
               </div>
-              <div className="SellWithUs left-0 top-[170px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="SellWithUs left-0 top-[170px] absolute text-white text-base font-medium  leading-tight">
                 Sell with us
               </div>
             </div>
           </ul>
           <ul className="my-[2rem]">
             <div className="Frame334 w-36 h-32 relative">
-              <div className="CustomerSupport left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold font-['Quicksand'] leading-none">
+              <div className="CustomerSupport left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold  leading-none">
                 Customer support
               </div>
-              <div className="ContactUs left-0 top-[30px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="ContactUs left-0 top-[30px] absolute text-white text-base font-medium  leading-tight">
                 Contact Us
               </div>
-              <div className="ReturnsExchanges left-0 top-[65px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="ReturnsExchanges left-0 top-[65px] absolute text-white text-base font-medium  leading-tight">
                 Returns & Exchanges
               </div>
-              <div className="PrivacyPolicy left-0 top-[100px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="PrivacyPolicy left-0 top-[100px] absolute text-white text-base font-medium  leading-tight">
                 Privacy Policy
               </div>
             </div>
           </ul>
           <ul className="my-[2rem]">
             <div className="Frame335 lg:w-40 w-[152px] lg:h-32 h-[124px] relative">
-              <div className="Services left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold font-['Quicksand'] leading-none">
+              <div className="Services left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold  leading-none">
                 Services
               </div>
-              <div className="ServicesWarranty left-0 top-[30px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="ServicesWarranty left-0 top-[30px] absolute text-white text-base font-medium  leading-tight">
                 Services & Warranty
               </div>
-              <div className="TermsConditions left-0 top-[65px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="TermsConditions left-0 top-[65px] absolute text-white text-base font-medium  leading-tight">
                 Terms & Conditions
               </div>
-              <div className="ShippingDelivery left-0 top-[98px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="ShippingDelivery left-0 top-[98px] absolute text-white text-base font-medium  leading-tight">
                 Shipping & Delivery{" "}
               </div>
             </div>
           </ul>
           <ul className="my-[2rem]">
             <div className="Frame339 w-36 h-28 relative">
-              <div className="OurPrograms left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold font-['Quicksand'] leading-none">
+              <div className="OurPrograms left-0 top-0 absolute text-white text-opacity-50 text-xs font-bold  leading-none">
                 Our programs
               </div>
-              <div className="CashbackPrograms left-0 top-[30px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="CashbackPrograms left-0 top-[30px] absolute text-white text-base font-medium  leading-tight">
                 Cashback programs
               </div>
-              <div className="GiftCards left-0 top-[65px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="GiftCards left-0 top-[65px] absolute text-white text-base font-medium  leading-tight">
                 Gift Cards
               </div>
-              <div className="WeeklyOffers left-0 top-[98px] absolute text-white text-base font-medium font-['Quicksand'] leading-tight">
+              <div className="WeeklyOffers left-0 top-[98px] absolute text-white text-base font-medium  leading-tight">
                 Weekly Offers
               </div>
             </div>
@@ -345,20 +345,20 @@ export default function Footer() {
             <li>
               <div className="Frame164 w-14 h-4 justify-start items-center gap-2 inline-flex">
                 <div className="Frame162 justify-start items-center gap-1 flex">
-                  <div className="Ar text-right text-white text-opacity-50 text-sm font-semibold font-['Quicksand']">
+                  <div className="Ar text-right text-white text-opacity-50 text-sm font-semibold ">
                     AR
                   </div>
                 </div>
                 <div className="Rectangle8 w-px h-4 bg-white rounded-lg" />
                 <div className="Frame163 justify-start items-center gap-1 flex">
-                  <div className="En text-right text-white text-sm font-semibold font-['Quicksand']">
+                  <div className="En text-right text-white text-sm font-semibold ">
                     EN
                   </div>
                 </div>
               </div>
             </li>
             <li>
-              <div className="AvaliablePaumentMethods opacity-60 text-white text-xs font-medium font-['Quicksand'] leading-none">
+              <div className="AvaliablePaumentMethods opacity-60 text-white text-xs font-medium  leading-none">
                 Avaliable paument methods
               </div>
             </li>

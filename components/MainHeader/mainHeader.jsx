@@ -98,7 +98,7 @@ function MainHeader(props) {
                         </div>
                     </div>
                 </div>
-                <Disclosure.Panel className="sm:hidden">
+                <Disclosure.Panel className="md:hidden flex">
                     <div className="space-y-1 px-2 pb-3 pt-2">
                         {navigation.map((item) => (<Disclosure.Button
                             key={item.name}
@@ -120,7 +120,7 @@ function MainHeader(props) {
                         <div
                             className="lg:flex block md:gap-8 gap-5  flex-1  lg:mx-2 mx-4  items-center justify-center sm:items-stretch sm:justify-start">
                             <div className="  flex-shrink-0 items-center mb-3">
-                                <div className="lg:hidden flex inset-y-0 justify-between     items-center ">
+                                <div className="md:hidden flex inset-y-0 justify-between  items-center ">
                                     <div className='flex '>
                                     {/* Mobile menu button*/}
                                     <Disclosure.Button
@@ -137,8 +137,8 @@ function MainHeader(props) {
                                     />
                                     </div>
                                     <div className='flex '>
-                                        <div className=" text-sm Bright-Orange block lg:hidden   ">
-                                            SAR 124,00
+                                        <div className="flex Bright-Orange md:hidden justify-center align-middle h-4 mt-3   ">
+                                            <img src='img/HeadIcon.svg' alt='icon' className='h-4'/><span className='text-xs h-1 '>+54,00SAR</span>
                                         </div>
 
                                         <button

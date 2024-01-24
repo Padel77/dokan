@@ -81,15 +81,15 @@ export default function card() {
         <div className="Frame23 left-0 top-[370px] absolute flex-col justify-start items-start gap-1 inline-flex">
           <div className="Frame22 w-32 justify-start items-center gap-2 inline-flex">
             <div className="00Sar w-20">
-              <span className="text-zinc-950 text-xl font-bold font-['Quicksand'] leading-relaxed">
+              <span className="text-zinc-950 text-xl font-bold  leading-relaxed">
                 25,
               </span>
-              <span className="text-zinc-950 text-sm font-bold font-['Quicksand'] leading-tight">
+              <span className="text-zinc-950 text-sm font-bold  leading-tight">
                 00 SAR
               </span>
             </div>
           </div>
-          <div className="PastaReggiaPenneZiti500gMoreInformation w-72 text-black text-base font-normal font-['Quicksand'] leading-tight">
+          <div className="PastaReggiaPenneZiti500gMoreInformation w-72 text-black text-base font-normal  leading-tight">
             Pasta Reggia — Penne ziti, 500g
             <br />
             More information
@@ -173,13 +173,13 @@ export default function card() {
           <div className="Tag w-24 h-7 px-2 py-1 left-[144px] top-[2px] absolute bg-amber-200 rounded-br-md justify-between items-center gap-1 inline-flex">
             <div className="AccountBalanceWalletFill0Wght400Grad0Opsz482 w-4 h-4 relative" />
             <div className="Title text-center flex justify-between items-center gap-1">
-              <span className="text-zinc-950 text-base font-semibold font-['Quicksand'] leading-tight">
+              <span className="text-zinc-950 text-base font-semibold  leading-tight">
                 +5.99{" "}
               </span>
-              <span className="text-zinc-950 text-xs font-semibold font-['Quicksand'] leading-none">
+              <span className="text-zinc-950 text-xs font-semibold  leading-none">
                 SAR
               </span>
-              <span className="text-zinc-950 text-base font-semibold font-['Quicksand'] leading-tight">
+              <span className="text-zinc-950 text-base font-semibold  leading-tight">
                 {" "}
               </span>
             </div>

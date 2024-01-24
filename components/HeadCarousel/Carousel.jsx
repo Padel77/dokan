@@ -5,9 +5,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { LuTriangleRight } from 'react-icons/lu';
 
-const Carousel = ({ images }) => {
+const Carousel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const sliderRef = useRef(null);
+
+    const images = ['./img/Hero.png', './img/Hero2.png', './img/Hero.png',];
 
     const settings = {
         dots: false,

@@ -18,7 +18,6 @@ import GiftSection from "@/components/GiftSection/GiftSection";
 import TopDeals from "@/components/TopDeals/TopDeals";
 
 function Home(props) {
-    const images = ['./img/Hero.png', './img/Hero.png', './img/Hero.png',];
     return (<>
             <NextSeo
                 title="Dokan"
@@ -26,7 +25,7 @@ function Home(props) {
             />
             <main className='sm:container lg:container-lg mx-auto '>
                 <MainHeader/>
-                <Carousel images={images}/>
+                <Carousel />
                 <CategorySlider/>
                 <BannerSection/>
                 {/*<HeadCarousel />*/}
