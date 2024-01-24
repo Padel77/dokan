@@ -49,12 +49,20 @@ const HighestProduct = () => {
 
 
     const slideLeft = () => {
+<<<<<<< HEAD
         let slider = document.getElementById("sliderC");
+=======
+        let slider = document.getElementById("sliderHighst");
+>>>>>>> 066e26ec78d61abecea00a03904f6c10afcdb526
         slider.scrollLeft = slider.scrollLeft - 235;
     };
 
     const slideRight = () => {
+<<<<<<< HEAD
         let slider = document.getElementById("sliderC");
+=======
+        let slider = document.getElementById("sliderHighst");
+>>>>>>> 066e26ec78d61abecea00a03904f6c10afcdb526
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
@@ -72,7 +80,11 @@ const HighestProduct = () => {
                         </button>
                     </div>
                 </div>
+<<<<<<< HEAD
                 {loading ? <Loading/> : <div className="row-container" id="sliderC">
+=======
+                {loading ? <Loading/> : <div className="row-container" id="sliderHighst">
+>>>>>>> 066e26ec78d61abecea00a03904f6c10afcdb526
                     {data.map((item) => (<div key={item.id} className="p-2">
                         <Link href={`/`} className="">
                             <div className="ProductCard w-72 h-96 relative">
