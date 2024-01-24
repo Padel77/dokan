@@ -16,6 +16,7 @@ import StickyFooter from "@/components/StickyFooter/StickyFooter";
 import PopularProducts from "@/components/PopularProducts/PopularProducts";
 import GiftSection from "@/components/GiftSection/GiftSection";
 import TopDeals from "@/components/TopDeals/TopDeals";
+import GridMobile from "@/components/MobileSection/GridMobile";
 
 function Home(props) {
     return (<>
@@ -28,9 +29,9 @@ function Home(props) {
                 <Carousel />
                 <CategorySlider/>
                 <BannerSection/>
-                {/*<HeadCarousel />*/}
                 <HighestProduct/>
                 <WeekOffer/>
+                <GridMobile/>
                 <TopDeals/>
                 <GiftSection/>
                 <PopularProducts/>

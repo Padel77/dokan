@@ -4,30 +4,26 @@ import React, {useEffect, useState} from "react";
 import {AiFillAlert, AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import {PlusCircleIcon} from "@heroicons/react/24/outline";
 import Loading from "@/layout/loading";
-// import api from '../../utils/api';
+import axios from "@/lib/axios";
 
 const PersonalCare = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true)
+            setLoading(true);
             try {
-                const response = await fetch('https://phpv8.aait-d.com/dukanv2/public/api/website/home');
-                const result = await response.json();
-                if (result.status === 'success' && result.data[6].content.length > 0) {
-                        setData(result.data[6].content);
-                        setLoading(false)
-                        console.log('CareData' ,result.data[6].content)}
-                     else {
-                        AiFillAlert('data fetching sucees but No Data Found')
-                        setLoading(false)
-                    }
-
-            } catch (e) {
-                setLoading(false)
-                console.log(e)
+                const response = await axios.get('home');
+                console.log("Poubler", response.data);
+                if (response.data.status === 'success' && response.data.data[6].content.length > 0) {
+                    setData(response.data.data[6].content);
+                } else {
+                    console.log('Data fetching success, but no category found');
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            } finally {
+                setLoading(false);
             }
         };
         fetchData();

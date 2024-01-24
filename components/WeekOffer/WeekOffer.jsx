@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import {AiFillAlert, AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import {PlusCircleIcon} from "@heroicons/react/24/outline";
 import Loading from "@/layout/loading";
-// import api from '../../utils/api';
+// import api from '../../lib/api';
 
 const WeekOffer = () => {
     // const [data, setData] = useState(null);
@@ -70,7 +70,7 @@ const WeekOffer = () => {
         slider.scrollLeft = slider.scrollLeft + 235;
     };
     return (<>
-        <div className="sm:my-10 my-0">
+        <div className="sm:my-10 my-0 sm:block hidden">
                 <div className="sm:block hidden mx-auto text-center">
                     <p className='text-lg font-bold'>This week offers</p>
                 </div>

@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import {AiFillAlert, AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import {PlusCircleIcon} from "@heroicons/react/24/outline";
 import Loading from "@/layout/loading";
-// import api from '../../utils/api';
+// import api from '../../lib/api';
 
 const HighestProduct = () => {
     const [data, setData] = useState([]);

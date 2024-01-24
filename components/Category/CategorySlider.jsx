@@ -7,6 +7,7 @@ import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import Link from "next/link";
 import Loading from "@/layout/loading";
 import ProductsLike from "@/components/ProductsLike/ProductsLike";
+import axios from "@/lib/axios";
 
 const products = [{
     id: 1,
@@ -26,14 +27,6 @@ const products = [{
     quantity: 1,
 }, {
     id: 3,
-    name: "Samsung Universe 9",
-    price: 1249,
-    discountPercentage: 15.46,
-    rating: 4.09,
-    imageSrc: "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-    quantity: 1,
-}, {
-    id: 4,
     name: "OPPOF19",
     price: 280,
     discountPercentage: 17.91,
@@ -41,7 +34,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
     quantity: 1,
 }, {
-    id: 5,
+    id: 4,
     name: "Huawei P30",
     price: 499,
     discountPercentage: 10.58,
@@ -49,7 +42,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
     quantity: 1,
 }, {
-    id: 6,
+    id: 5,
     name: "MacBook Pro",
     price: 1749,
     discountPercentage: 11.02,
@@ -57,7 +50,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/6/thumbnail.png",
     quantity: 1,
 }, {
-    id: 7,
+    id: 6,
     name: "Samsung Galaxy Book",
     discountPercentage: 4.15,
     price: 1499,
@@ -65,7 +58,7 @@ const products = [{
     imageSrc: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
     quantity: 1,
 }, {
-    id: 8,
+    id: 7,
     name: "Microsoft Surface Laptop 4",
     price: 1499,
     discountPercentage: 10.23,
@@ -74,7 +67,7 @@ const products = [{
     quantity: 1,
 }, {
     name: "Infinix INBOOK",
-    id: 9,
+    id: 8,
     price: 1099,
     discountPercentage: 11.83,
     rating: 4.54,
@@ -90,12 +83,10 @@ const CategorySlider = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch('https://phpv8.aait-d.com/dukanv2/public/api/website/home');
-                const result = await response.json();
-
-                if (result.status === 'success' && result.data[3]?.content?.length > 0) {
-                    setData(result.data[3].content);
-                    console.log("category", result.data[3].content);
+                const response = await axios.get('home');
+                    console.log("category", response.data.data[3]);
+                if (response.data.status === 'success' && response.data.data[3].content.length > 0) {
+                    setData(response.data.data[3]);
                 } else {
                     console.log('Data fetching success, but no category found');
                 }
@@ -125,14 +116,14 @@ const CategorySlider = () => {
         </div>
 
         {loading ? <Loading/> : <section
-            className="splide px-5 py-2 my-10"
+            className="splide px-3 py-2 "
             aria-label="Splide Basic HTML Example"
         >
             <Splide options={splideOption}>
                 {products?.map((item) => (<SplideSlide
                     key={item.id} className="splide__slide">
                     <div className="flex flex-col text-center pb-0 ">
-                        <img src={item.imageSrc} alt={item.name} className="relative overflow-hidden aspect-w-3 h-25"/>
+                        <img src={item.imageSrc} alt={item.name} className="relative overflow-hidden aspect-w-3 "/>
                         <p>{item.name}</p>
                     </div>
                 </SplideSlide>))}

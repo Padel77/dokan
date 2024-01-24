@@ -4,34 +4,29 @@ import React, {useEffect, useState} from "react";
 import {AiFillAlert, AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import {PlusCircleIcon} from "@heroicons/react/24/outline";
 import Loading from "@/layout/loading";
-// import api from '../../utils/api';
+import axios from "@/lib/axios";
 
 const ProductsLike = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true);
             try {
-                setLoading(true)
-                const response = await fetch('https://phpv8.aait-d.com/dukanv2/public/api/website/home');
-                const result = await response.json();
-
-                if (result.status == 'success') {
-                    if (result.data[6].content.length > 0) {
-                        setData(result.data[6].content);
-                        setLoading(false)
-                        console.log('adel',result.data[6].content)
-                    } else {
-                        AiFillAlert('data fetching sucees but No Data Found')
-                        setLoading(false)
-                    }
+                const response = await axios.get('home');
+                console.log("Like", response.data);
+                if (response.data.status === 'success' && response.data.data[6].content.length > 0) {
+                    setData(response.data.data[6].content);
+                } else {
+                    console.log('Data fetching success, but no category found');
                 }
-            } catch (e) {
-                setLoading(false)
-                console.log(e)
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            } finally {
+                setLoading(false);
             }
-            // console.log(result.data[3].content);
         };
+
         fetchData();
     }, []);
     // useEffect(() => {

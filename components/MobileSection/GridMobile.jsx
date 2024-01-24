@@ -10,27 +10,22 @@ const HeadCarousel = () => {
     const galleryTab = [
 // you can add more image if you want
         {
-            imageUrl: "https://themewagon.github.io/snapshot/images/model-1.jpg",
+            imageUrl: "/img/Grid1.png",
             type: "Nature",
             title: "Beautiful Work",
         },
         {
-            imageUrl: "https://themewagon.github.io/snapshot/images/model-2.jpg",
+            imageUrl: "/img/Grid2.png",
             type: "Nature",
             title: "Beautiful Work",
         },
         {
-            imageUrl: "https://themewagon.github.io/snapshot/images/model-3.jpg",
+            imageUrl: "/img/Grid3.png",
             type: "Nature",
             title: "Beautiful Work",
         },
         {
-            imageUrl: "https://themewagon.github.io/snapshot/images/model-4.jpg",
-            type: "Nature",
-            title: "Beautiful Work",
-        },
-        {
-            imageUrl: "https://themewagon.github.io/snapshot/images/model-5.jpg",
+            imageUrl: "/img/Grid4.png",
             type: "Nature",
             title: "Beautiful Work",
         },
@@ -40,10 +35,10 @@ const HeadCarousel = () => {
 
     const slides = galleryTab.map((item) => ({
         src: item.imageUrl,
-        width: 3840,
-        height: 2560,
+        width: 300,
+        height: 150,
         srcSet: [
-            { src: item.imageUrl, width: 320, height: 213 },
+            { src: item.imageUrl, width: 150, height: 150 },
             { src: item.imageUrl, width: 640, height: 426 },
             { src: item.imageUrl, width: 1200, height: 800 },
             { src: item.imageUrl, width: 2048, height: 1365 },
@@ -53,21 +48,20 @@ const HeadCarousel = () => {
 
     return (
         <>
-            <div className="w-full">
-                <div className=" ">
-                    <div className="flex flex-col md:grid md:grid-cols-3 h-full gap-0 flex-wrap mx-2 md:mx-0">
+            <div className="sm:hidden block mb-6 ">
+                <div className="h-full ">
+                    <div className=" md:grid-cols-3 gap-0   md:mx-0">
                         {galleryTab.map((x, index) => {
                             return (
-                                <div key={index} className="md:h-[50vw] h-screen relative">
-                                    <div className="group h-full">
+                                <div key={index} className="w-full   px-2 relative ">
+                                    <div className="group ">
                                         <div
-                                            className="bg-cover bg-center h-full w-full bg-no-repeat"
+                                            className="bg-cover bg-center  h-40  bg-no-repeat"
                                             style={{ backgroundImage: `url("${x.imageUrl}")` }}
                                         >
-                                            <div className="text-3xl text-white absolute bottom-0 left-2 z-10">
-                                                <div>{x.type}</div>
-                                                <div>{x.title}</div>
-                                            </div>
+                                            {/*<div className="text-3xl text-white absolute bottom-0 left-2 z-10">*/}
+                                            {/*    /!*<div>{x.title}</div>*!/*/}
+                                            {/*</div>*/}
                                         </div>
                                         <div
                                             className="bg-black opacity-0 group-hover:opacity-75 absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out"
