@@ -24,7 +24,7 @@ function Home(props) {
                 title="Dokan"
                 description="Highlights key selling points, including the variety of products, emphasis on quality, the user-friendly interface, and the overall positive shopping experience. It also includes a call to action, encouraging visitors to start their shopping journey with Dokan."
             />
-            <main className='sm:container lg:container-lg mx-auto '>
+            <main className='sm:container lg:container-lg mx-auto overflow-hidden '>
                 <MainHeader/>
                 <Carousel />
                 <CategorySlider/>
